@@ -505,6 +505,126 @@ print("Classification Report:")
 print(report)
 ```
 
+**3. Support Vector Machine Classifier**
+To Train and Evaluate the Logistic Regression Model, follow these steps.
+
+Step -1: Import Required Libraries Here we need only the SVC instance from the sklearn library. This can be done as follows.
+
+```{python}
+from sklearn.svm import SVC
+```
+Step-2: Initialize the Model
+
+Create an instance of the SVC model:
+```{python}
+model = SVC(kernel='linear', C=1.0, random_state=seed)
+```
+
+Step-3. Train the Model
+
+Fit the model to the training data:
+
+```{python}
+model.fit(X_train, y_train.values.ravel())
+```
+
+Step-4: Make Predictions
+
+Use the trained model to predict the labels for the test set:
+
+```{python}
+y_pred = model.predict(X_test)
+```
+
+Step-5 Evaluate the Model
+
+Assess the model’s performance using confussion matrix, model accuracy and a detailed classification report:
+
+```{python}
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+# Generate confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+# Generate classification report
+report = classification_report(y_test, y_pred)
+```
+
+```{python}
+# Plot confusion matrix as a heatmap
+plt.figure(figsize=(6,5))
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=y.columns, yticklabels=y.columns)
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted Labels')
+plt.ylabel('True Labels')
+plt.show()
+```
+
+```{python}
+print(f"Accuracy: {accuracy:.2f}")
+print("Classification Report:")
+print(report)
+```
+
+4.Decision Tree Classifier
+To Train and Evaluate the Decision Tree Model, follow these steps.
+
+Step -1: Import Required Libraries Here we need only the Decision Tree instance from the sklearn library. This can be done as follows.
+
+```{python}
+from sklearn.tree import DecisionTreeClassifier
+```
+Step-2: Initialize the Model
+
+Create an instance of the Decision tree model:
+```{python}
+model = DecisionTreeClassifier(random_state=seed)
+```
+Step-3. Train the Model
+
+Fit the model to the training data:
+
+```{python}
+model.fit(X_train, y_train.values.ravel())
+```
+
+Step-4: Make Predictions
+
+Use the trained model to predict the labels for the test set:
+
+```{python}
+y_pred = model.predict(X_test)
+```
+
+Step-5 Evaluate the Model
+
+Assess the model’s performance using confussion matrix, model accuracy and a detailed classification report:
+
+```{python}
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+# Generate confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+# Generate classification report
+report = classification_report(y_test, y_pred)
+```
+
+```{python}
+# Plot confusion matrix as a heatmap
+plt.figure(figsize=(6,5))
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=y.columns, yticklabels=y.columns)
+plt.title('Confusion Matrix')
+plt.xlabel('Predicted Labels')
+plt.ylabel('True Labels')
+plt.show()
+```
+
+```{python}
+print(f"Accuracy: {accuracy:.2f}")
+print("Classification Report:")
+print(report)
+```
+
+
 
 **5. RandonForest Classifier**
 To Train and Evaluate the RandomForest Model, follow these steps.
