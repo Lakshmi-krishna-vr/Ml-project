@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docx
 
 website:
   title: "Ml-project"
@@ -7,13 +8,18 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: ML_notebook.qmd
+        text: notes
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+
+
+
+
+    
 
 
 
