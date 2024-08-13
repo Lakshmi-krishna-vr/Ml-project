@@ -383,6 +383,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 In the next section, we will create instances of all the above mentioned classification algorithms one by one.
 
 **1. Logistic Regression**
+
 To Train and Evaluate the Logistic Regression Model, follow these steps.
 
 **Step -1: Import Required Libraries Here we need only the LogisticRegression instance from the sklearn library.** This can be done as follows.
@@ -506,6 +507,7 @@ print(report)
 ```
 
 **3. Support Vector Machine Classifier**
+
 To Train and Evaluate the Logistic Regression Model, follow these steps.
 
 Step -1: Import Required Libraries Here we need only the SVC instance from the sklearn library. This can be done as follows.
@@ -565,21 +567,22 @@ print("Classification Report:")
 print(report)
 ```
 
-4.Decision Tree Classifier
+**4.Decision Tree Classifier**
+
 To Train and Evaluate the Decision Tree Model, follow these steps.
 
-Step -1: Import Required Libraries Here we need only the Decision Tree instance from the sklearn library. This can be done as follows.
+**Step -1: Import Required Libraries Here we need only the Decision Tree instance from the sklearn library. This can be done as follows.**
 
 ```{python}
 from sklearn.tree import DecisionTreeClassifier
 ```
-Step-2: Initialize the Model
+**Step-2: Initialize the Model**
 
 Create an instance of the Decision tree model:
 ```{python}
 model = DecisionTreeClassifier(random_state=seed)
 ```
-Step-3. Train the Model
+**Step-3:Train the Model**
 
 Fit the model to the training data:
 
@@ -587,7 +590,7 @@ Fit the model to the training data:
 model.fit(X_train, y_train.values.ravel())
 ```
 
-Step-4: Make Predictions
+**Step-4: Make Predictions**
 
 Use the trained model to predict the labels for the test set:
 
@@ -595,7 +598,7 @@ Use the trained model to predict the labels for the test set:
 y_pred = model.predict(X_test)
 ```
 
-Step-5 Evaluate the Model
+**Step-5 Evaluate the Model**
 
 Assess the model’s performance using confussion matrix, model accuracy and a detailed classification report:
 
@@ -629,13 +632,13 @@ print(report)
 **5. RandonForest Classifier**
 To Train and Evaluate the RandomForest Model, follow these steps.
 
-Step -1: Import Required Libraries Here we need only the Random Forest instance from the sklearn library. This can be done as follows.
+**Step -1: Import Required Libraries Here we need only the Random Forest instance from the sklearn library. This can be done as follows.**
 
 ```{python}
 from sklearn.ensemble import RandomForestClassifier
 ```
 
-Step-2: Initialize the Model
+**Step-2: Initialize the Model**
 
 Create an instance of the RandomForest model:
 
@@ -643,7 +646,7 @@ Create an instance of the RandomForest model:
 Rf_model = RandomForestClassifier(n_estimators=100, random_state=seed)
 ```
 
-Step-3: Train the Model
+**Step-3: Train the Model**
 
 Fit the model to the training data:
 
@@ -651,7 +654,7 @@ Fit the model to the training data:
 Rf_model.fit(X_train, y_train.values.ravel())
 ```
 
-Step-4: Make Predictions
+**Step-4: Make Predictions**
 
 Use the trained model to predict the labels for the test set:
 
@@ -659,7 +662,7 @@ Use the trained model to predict the labels for the test set:
 y_pred = Rf_model.predict(X_test)
 ```
 
-Step-5: Evaluate the Model
+**Step-5: Evaluate the Model**
 
 Assess the model’s performance using confussion matrix, model accuracy and a detailed classification report:
 
